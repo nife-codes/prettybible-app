@@ -1,10 +1,14 @@
 import { StyleSheet, Text, View } from 'react-native';
+import { Link } from 'expo-router';
 
 export default function HomeScreen() {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Welcome to PrettyBible 💖📖</Text>
       <Text style={styles.subtitle}>Custom design coming soon!</Text>
+      <Link href="/create-account" style={{ marginTop: 24, color: '#c71585', fontWeight: 'bold' }}>
+        Go to Create Account
+      </Link>
     </View>
   );
 }

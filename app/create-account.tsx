@@ -1,60 +1,122 @@
 import { Link } from 'expo-router';
-import { Text, TextInput, TouchableOpacity, View } from 'react-native';
+import { ImageBackground, Text, TextInput, TouchableOpacity, View } from 'react-native';
 
 export default function CreateAccountScreen() {
   return (
-    <View style={{ flex: 1, justifyContent: 'center', padding: 20, backgroundColor: '#fff' }}>
-      <Text style={{ fontSize: 28, fontWeight: 'bold', marginBottom: 20, color: '#333' }}>
-        Create Account
-      </Text>
+    <ImageBackground source={require('../assets/images/image 3.png')} style={{ flex: 1 }}>
+      <View style={{ flex: 1, justifyContent: 'center', padding: 20 }}>
 
-      <TextInput
-        placeholder="Full Name"
-        style={{
-          borderWidth: 1,
-          borderColor: '#ccc',
-          padding: 12,
-          borderRadius: 10,
-          marginBottom: 10,
-        }}
-      />
-      <TextInput
-        placeholder="Email"
-        keyboardType="email-address"
-        style={{
-          borderWidth: 1,
-          borderColor: '#ccc',
-          padding: 12,
-          borderRadius: 10,
-          marginBottom: 10,
-        }}
-      />
-      <TextInput
-        placeholder="Password"
-        secureTextEntry
-        style={{
-          borderWidth: 1,
-          borderColor: '#ccc',
-          padding: 12,
-          borderRadius: 10,
+        <Text style={{
+          fontSize: 28,
           marginBottom: 20,
-        }}
-      />
+          color: '#EFCBCB',
+          fontFamily: 'Pancake',
+        }}>
+          Create Account
+        </Text>
 
-      <TouchableOpacity
-        style={{
-          backgroundColor: '#C79AB4',
-          padding: 15,
-          borderRadius: 10,
-          alignItems: 'center',
-        }}
-      >
-        <Text style={{ color: '#fff', fontWeight: 'bold' }}>Sign Up</Text>
-      </TouchableOpacity>
+        {/* ✍️ Inputs in BricolageGrotesque */}
+        <TextInput
+          placeholder="What's your First name?"
+          placeholderTextColor="#fff"
+          style={{
+            fontFamily: 'BricolageGrotesque',
+            borderBottomWidth: 0.5,
+            borderColor: '#fff',
+            backgroundColor: 'transparent',
+            color: '#fff',
+            paddingVertical: 12,
+            marginBottom: 20,
+          }}
+        />
+        <TextInput
+          placeholder="What's your Last name?"
+          placeholderTextColor="#fff"
+          style={{
+            fontFamily: 'BricolageGrotesque',
+            borderBottomWidth: 0.5,
+            borderColor: '#fff',
+            backgroundColor: 'transparent',
+            color: '#fff',
+            paddingVertical: 12,
+            marginBottom: 20,
+          }}
+        />
+        <TextInput
+          placeholder="Enter your Email Address"
+          keyboardType="email-address"
+          placeholderTextColor="#fff"
+          style={{
+            fontFamily: 'BricolageGrotesque',
+            borderBottomWidth: 0.5,
+            borderColor: '#fff',
+            backgroundColor: 'transparent',
+            color: '#fff',
+            paddingVertical: 12,
+            marginBottom: 20,
+          }}
+        />
+        <TextInput
+          placeholder="Set Password"
+          secureTextEntry
+          placeholderTextColor="#fff"
+          style={{
+            fontFamily: 'BricolageGrotesque',
+            borderBottomWidth: 0.5,
+            borderColor: '#fff',
+            backgroundColor: 'transparent',
+            color: '#fff',
+            paddingVertical: 12,
+            marginBottom: 20,
+          }}
+        />
+        <TextInput
+          placeholder="Confirm Password"
+          secureTextEntry
+          placeholderTextColor="#fff"
+          style={{
+            fontFamily: 'BricolageGrotesque',
+            borderBottomWidth: 0.5,
+            borderColor: '#fff',
+            backgroundColor: 'transparent',
+            color: '#fff',
+            paddingVertical: 12,
+            marginBottom: 50,
+          }}
+        />
 
-      <Link href="/" style={{ marginTop: 20, textAlign: 'center', color: '#666' }}>
-        Already have an account? Log in
-      </Link>
-    </View>
+        {/* 🎀 Create Account button */}
+        <TouchableOpacity
+          style={{
+            backgroundColor: '#efcbcb',
+            padding: 15,
+            borderRadius: 10,
+            alignItems: 'center',
+          }}
+        >
+          <Text style={{
+            color: '#593B20',
+            fontFamily: 'BricolageGrotesque',
+            fontSize: 16,
+          }}>
+            Create Account
+          </Text>
+        </TouchableOpacity>
+
+        {/* 📝 Footer text */}
+        <Text style={{
+          color: '#fff',
+          textAlign: 'center',
+          marginTop: 32,
+          fontFamily: 'BricolageGrotesque',
+          fontSize: 14,
+        }}>
+          Already have an account?{' '}
+          <Link href="/" style={{ color: '#EFCBCB' }}>
+            Log in
+          </Link>
+        </Text>
+      </View>
+    </ImageBackground>
   );
 }
